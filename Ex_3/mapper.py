@@ -6,7 +6,6 @@
 # We want elements 2 (store name) and 4 (cost)
 
 # We need to write them out to standard output, separated by a tab
-
 import sys
 
 for line in sys.stdin:
@@ -14,4 +13,6 @@ for line in sys.stdin:
     if len(data) != 6:
         continue
     date, time, store, item, cost, payment = data
-    print(payment+"\t"+cost)
+
+    cost = float(cost)
+    print(payment+"\t"+str(abs(cost)))

@@ -1,3 +1,4 @@
+
 #!/usr/bin/python
 
 import sys
@@ -23,7 +24,7 @@ for line in sys.stdin:
     # Escribe un par key:value ante un cambio na key
     # Reinicia o total
     if oldKey and oldKey != thisKey:
-        print(oldKey+"\t"+str(salesTotal))
+        print(oldKey+"\t"+str(abs(salesTotal)))
         oldKey = thisKey;
         salesTotal = 0
     oldKey = thisKey
@@ -32,4 +33,6 @@ for line in sys.stdin:
 
 # Escribe o ultimo par, unha vez rematado o bucle
 if oldKey != None:
-    print(oldKey+"\t"+str(max(salesTotal)))
+    print(oldKey+"\t"+str(salesTotal))
+
+

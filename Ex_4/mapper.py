@@ -12,7 +12,9 @@ for line in sys.stdin:
     if len(data) != 6:
         continue
     date, time, store, item, cost, payment = data
-    print(payment+"\t"+max(cost))
+
+    cost = float(cost)
+    print(payment+"\t"+str(abs(cost)))
 
     
 
